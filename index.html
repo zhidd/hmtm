@@ -1,37 +1,4 @@
-﻿<?php
-
-ini_set("display_errors", "On");//打开错误提示
-ini_set("error_reporting",E_ALL);//显示所有错误
-header('Content-Type:text/html; charset=utf-8');
-
  
-require 'conn.php';
-
-$a=$_GET['pid'];
- 
- 
-$sql="select * from   ss_content   where pid='$a'";
- $res= mysqli_query($conn,$sql);
-
-
-         if (mysqli_affected_rows($conn) > 0){
-              
-			 $row = mysqli_fetch_array($res,MYSQLI_ASSOC);
-			 //$tid= $row['tid'];
-			 //$sql="select * from   itbook_left   where id='$tid'";
-			// $res= mysqli_query($conn,$sql);
-			 //$row2 = mysqli_fetch_array($res,MYSQLI_ASSOC);
-			  
-			 
-              //print_r($row);
-           }
-   
-  
-
-
-mysqli_close($conn);
-
-?>
 
 <!DOCTYPE html>
 
